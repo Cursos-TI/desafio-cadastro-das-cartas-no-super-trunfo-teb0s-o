@@ -8,13 +8,16 @@
 
 int main() {
 
-  char id[4], name[50];
-  // id e name = código e nome da cidade
-  float area, pib;
+  // state, id e name = estado, código e nome da cidade
+  char state, id[3], name[50];
   // area = área da cidade, e pib = Pib da cidade
-  int tourist_spots, population;
+  float area, pib;
   // tourist_spots = pontos turísticos da cidade, e population = número da população da cidade
+  int tourist_spots, population;
 
+  //registrar a letra do estado da cidade:
+  printf("Digite a letra do estado da cidade: ");
+  scanf("%c", &state);
 
   //registrar o código da cidade:
   printf("Digite o código da cidade: ");
@@ -29,7 +32,7 @@ int main() {
   scanf("%d", &population);
 
   //registrar a área da cidade:
-  printf("Digite a área da cidade em m²: ");
+  printf("Digite a área da cidade em km²: ");
   scanf("%f", &area);
 
   //registrar o PIB da cidade:
@@ -42,8 +45,8 @@ int main() {
 
 
   //exibir informações da carta:
-  printf("\nCarta:\n\nCódigo: %s\nNome: %s\nPopulação: %d\nÁrea: %.3fm²\nPIB: %.2f R$\nQuantidade de pontos turísticos: %d\n", 
-         id, name, population, area, pib, tourist_spots);
+  printf("\nEstado: %c\nCódigo: %s\nNome: %s\nPopulação: %d\nÁrea: %.2f km²\nPIB: %.2f Bilhões de reais\nQuantidade de pontos turísticos: %d\n", 
+         state, id, name, population, area, pib, tourist_spots);
 
     return 0;
 }
