@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 // Desafio Super Trunfo - Países
 // Tema 1 - Cadastro das Cartas
@@ -8,8 +9,7 @@
 
 int main() {
 
-  // state, id e name = estado, código e nome da cidade
-  char state, id[3], name[50];
+  char estado, codigo[4], nome[50];
   // area = área da cidade, e pib = Pib da cidade
   float area, pib;
   // tourist_spots = pontos turísticos da cidade, e population = número da população da cidade
@@ -17,15 +17,18 @@ int main() {
 
   //registrar a letra do estado da cidade:
   printf("Digite a letra do estado da cidade: ");
-  scanf("%c", &state);
+  scanf("%c", &estado);
 
   //registrar o código da cidade:
   printf("Digite o código da cidade: ");
-  scanf("%s", &id);
+  scanf("%3s", &codigo);
 
   //registrar o nome da cidade:
   printf("Digite o nome da cidade: ");
-  scanf("%s", &name);
+  //scanf(" %s", &nome);
+  getchar();
+  fgets(nome, sizeof(nome), stdin);
+  nome[strlen(nome)-1] = '\0';
 
   //registrar o número da cidade:
   printf("Digite o número da população da cidade: ");
@@ -46,7 +49,7 @@ int main() {
 
   //exibir informações da carta:
   printf("\nEstado: %c\nCódigo: %s\nNome: %s\nPopulação: %d\nÁrea: %.2f km²\nPIB: %.2f Bilhões de reais\nQuantidade de pontos turísticos: %d\n", 
-         state, id, name, population, area, pib, tourist_spots);
+         estado, codigo, nome, population, area, pib, tourist_spots);
 
     return 0;
 }
