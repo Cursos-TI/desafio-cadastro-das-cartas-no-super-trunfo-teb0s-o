@@ -25,7 +25,6 @@ int main() {
 
   //registrar o nome da cidade:
   printf("Digite o nome da cidade: ");
-  //scanf(" %s", &nome);
   getchar();
   fgets(nome, sizeof(nome), stdin);
   nome[strlen(nome)-1] = '\0';
