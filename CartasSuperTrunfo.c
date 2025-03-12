@@ -32,7 +32,7 @@ int main () {
 
   // Registrar o nome da cidade
   printf("Digite o nome da cidade: ");
-  getchar();  // Consume newline
+  getchar();
   fgets(nome, sizeof(nome), stdin);
   nome[strlen(nome)-1] = '\0';
 
@@ -61,7 +61,7 @@ int main () {
 
   // Registrar a letra do estado da cidade
   printf("Digite a letra do estado da cidade: ");
-  getchar();  // Consume newline left by previous input
+  getchar();
   scanf("%c", &estado_2);
 
   // Registrar o código da cidade
@@ -70,7 +70,7 @@ int main () {
 
   // Registrar o nome da cidade
   printf("Digite o nome da cidade: ");
-  getchar();  // Consume newline
+  getchar();
   fgets(nome_2, sizeof(nome_2), stdin);
   nome_2[strlen(nome_2)-1] = '\0';
 
